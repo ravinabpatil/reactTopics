@@ -14,9 +14,10 @@ const ChatRoom = ({ option }) => {
 
   return (
     <div>
-      <label>Servel URL</label>
+      <label>Servel URL </label>
       <input
         value={serverUrl}
+        className="border-2 my-2" 
         onChange={(e) => {
           setServelUrl(e.target.value);
         }}

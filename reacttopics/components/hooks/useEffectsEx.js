@@ -30,7 +30,7 @@ const UseEffectsEx = () => {
         </select>
 
         <button className="bg-black btn-blue text-white" onClick={()=>{setChatOption(!chatOption)}}>{chatOption? "open Chat" : "close Chat"}</button>
-        {chatOption && <hr/>}
+        {/* {chatOption && <hr/>} */}
         {chatOption && <ChatRoom option={option}/>}
       </div>
     </>
