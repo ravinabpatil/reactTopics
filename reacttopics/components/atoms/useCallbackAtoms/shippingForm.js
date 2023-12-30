@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import InputField from "./inputField";
 import Label from "./label";
 
-const ShippingForm = () => {
+const ShippingForm = ({ theme }) => {
   const [count, setCount] = useState(1);
   const [formdata, setFormData] = useState({});
-  console.log("formdata" , formdata)
-  const handleOnChange = (name , value) => {
+
+  const handleSubmit = () => {
+
+  };
+  //   console.log("formdata" , formdata)
+  const handleOnChange = (name, value) => {
     setFormData((prev) => {
       return { ...prev, [name]: value };
-      //Question :- can use please explain return { ...prev, name: value }; when i used these was not able to get response , by using these how was able to get proper response
+      /* Question :- can use please explain return { ...prev, name: value }; when i used these was not able to get response , 
+      by using these how was able to get proper response */
     });
   };
   console.log("count", count);
   return (
-    <div>
+    <div className={`${theme} py-2`}>
       <div>
         <label>Number Of Items</label>
         <button
@@ -47,7 +52,7 @@ const ShippingForm = () => {
           name={"street"}
           value={formdata.street}
           onchange={(e) => {
-            handleOnChange(e.target.name , e.target.value)
+            handleOnChange(e.target.name, e.target.value);
           }}
         />
       </div>
@@ -56,11 +61,11 @@ const ShippingForm = () => {
         <Label label={"Street "} />
         <InputField
           type={"text"}
-          className={"border-2"}
+          className={"border-2 my-2"}
           name={"city"}
           value={formdata.city}
           onchange={(e) => {
-            handleOnChange(e.target.name , e.target.value)
+            handleOnChange(e.target.name, e.target.value);
           }}
         />
       </div>
@@ -73,9 +78,19 @@ const ShippingForm = () => {
           name={"postalCode"}
           value={formdata.postalCode}
           onchange={(e) => {
-            handleOnChange(e.target.name , e.target.value)
+            handleOnChange(e.target.name, e.target.value);
           }}
         />
+      </div>
+      <div>
+        <button
+          className="bg-green-300 p-2 w-[10em] rounded my-2 text-base text-white "
+          onClick={() => {
+            handleSubmit();
+          }}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );

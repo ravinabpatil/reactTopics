@@ -3,10 +3,11 @@ import ShippingForm from './shippingForm'
 
 const Product = ({theme}) => {
 
+    
 
   return (
     <div>
-      <ShippingForm/>
+      <ShippingForm theme={theme}/>
     </div>
   )
 }

@@ -6,10 +6,10 @@ const UseCallBackEx = () => {
   return (
     <div className="text-center">
         
-        <h2>"UseCallBack"</h2>
+    <h2>"UseCallBack"</h2>
       <input type="checkbox" onChange={()=>{setCheckedTheme(!checkTheme)}}/> <label>Do you want to chnage the theme</label>
 
-      <Product/>
+      <Product theme={checkTheme? "bg-black" : ""}/>
     </div>
   );
 };
