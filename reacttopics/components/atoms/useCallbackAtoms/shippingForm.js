@@ -29,8 +29,7 @@ const ShippingForm = ({ theme }) => {
             });
           }}
           className="bg-greem-300 p-2 text-base"
-        >
-          -
+        > -
         </button>
         {count}
         <button
